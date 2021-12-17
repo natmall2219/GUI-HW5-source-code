@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<!--
+    Natalie M. 
+    GUI Programming I 201
+    12/6/21
+    HW5: Scrabble board game 
+    Implementing a scrabble board table with a customized Bootstrap theme, a 15 column grid, SweetAlerts 
+    error messages, javascript with JQuery, JQuery UI, and css. 
+    lots of my code was inspired by former student Jason Downing's assignment, as I was struggling with
+    where to begin on certain implementations, but unless otherwise noted with in-code citations, 
+    code is my own (most of the code in this assignnment is- I tried my best to be creative with JQuery!)
+-->
+<!--
+    using a 14-column grid system for the implementation of the actual Scrabble table. 
+-->
+<!--  Configuration -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!--  Website main title that describes its purpose -->
+<title>Natalie's Scrabble</title>
+<!--add any relevant CSS stylesheets here (for the theme, other custom implementations etc)-->
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+<div id="Game_Board_Container"class="drop-zone"><img src="Scrabble_Board_OneLine.png"></div>
+
+<div id="Tile_rack_div" class="drop-zone"><img src="scrabble-tile-holder-406774_640.png"></div>
+
+<div id="scores_container"></div>
+
+<div id="buttons_container">
+    <!--this contains but the submit and reset buttons. -->
+    <div id="submit_button"></div>
+    <div id="reset_button"></div>
+    <div id="ClearBoard_button"></div>
+</div>
+
+<div id="DragAndDropTiles" class="letter_tiles"></div>
+
+<!--borrowed a bootstrap table from here: https://getbootstrap.com/docs/4.0/content/tables/ -->
+<div id="tiles_remain">
+<table class="table" id="tiles_remaining_table">
+    <thead>
+      <tr>
+        <th scope="col" colspan="9">Letters Remaining</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td class="table">A</td>
+        <td class="table">B</td>
+        <td class="table">C</td>
+        <td class="table">D</td>
+        <td class="table">E</td>
+        <td class="table">F</td>
+        <td class="table">G</td>
+        <td class="table">H</td>
+        <td class="table">I</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td class="table">J</td>
+        <td class="table">K</td>
+        <td class="table">L</td>
+        <td class="table">M</td>
+        <td class="table">N</td>
+        <td class="table">O</td>
+        <td class="table">P</td>
+        <td class="table">Q</td>
+        <td class="table">R</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td class="table">S</td>
+        <td class="table">T</td>
+        <td class="table">U</td>
+        <td class="table">V</td>
+        <td class="table">W</td>
+        <td class="table">X</td>
+        <td class="table">Y</td>
+        <td class="table">Z</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!-- CDN for jQuery (needed for Bootstrap's JavaScript plugins).-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+<!--Insert CDN for custom Bootstrap implementation here.-->
+
+<!--CDN for the JQuery UI.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+
+<!--using SweetAlerts for error messages to be displayed to the user. -->
+<script src="sweetalert2.all.min.js"></script>
+
+
+<script src="buttonCode.js"></script>
+
+<script src="DraggingCode.js"></script>
+
+<script src="DroppingCode.js"></script>
+
+<script src="determine_game_score.js"></script>
+
+<script src="GameBoardPlay.js"></script>
+
+</body>
+</html>

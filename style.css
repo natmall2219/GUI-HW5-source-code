@@ -1,0 +1,34 @@
+/*
+//Natalie M. 
+//GUI Programming 201
+//12/6/21
+//HW5: Scrabble
+this file contains the styling aspects for the site. 
+*/
+
+body {
+
+}
+
+#Game_board_container {
+
+
+}
+
+#Tile_rack_div{
+    display: block; 
+    position: relative; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 65%; 
+}
+
+
+#tiles_remaining_table{
+    text-align: center;
+    align-content: center;
+}
+
+
